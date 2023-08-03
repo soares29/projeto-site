@@ -1,0 +1,19 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+/* Configurações gerais */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --cor-fundo: #E5E5E5;
+    --cor-padrao: #BB99DD;
+}
+
+body {
+    font-family: 'poppins';
+    background-color: var(--cor-fundo);
+}
