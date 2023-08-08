@@ -1,25 +1,20 @@
-/* Fonte */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
 
-/* Configurações gerais */
+:root {
+    --cor-padrao: #BB99DD;
+    --cor-do-fundo: #E5E5E5;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: 'poppins', Arial, Helvetica, sans-serif;
-}
-
-:root {
-    --cor-fundo: #E5E5E5;
-    --cor-padrao: #BB99DD;
 }
 
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    background-color: var(--cor-do-fundo);
 }
 
 section {
@@ -27,28 +22,28 @@ section {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    height: 100vh;
 }
 
-section .foto {
+section div.foto {
     display: flex;
-    justify-content:center;
     align-items: center;
-
-    z-index: 10;
+    justify-content: center;
 }
 
 section div.borda {
-    border: 4px solid var(--cor-padrao);
-    border-top: 3px transparent;
-    border-bottom: 3px transparent;
     width: 220px;
     height: 220px;
-    animation: girarBorda linear infinite 8s;
-    position: absolute;
+    border: 3px solid var(--cor-padrao);
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
     border-radius: 50%;
+    animation: bordaAnimation linear infinite 10s;
+
+    position: absolute;
 }
 
-@keyframes girarBorda {
+@keyframes bordaAnimation {
     0% {
         transform: rotate(0deg);
     }
@@ -60,10 +55,7 @@ section div.borda {
 
 section div.foto img {
     border-radius: 50%;
-    width: 100%;
-    max-width: 200px;
 }
-
 
 section span {
     margin: 24px 0 24px 0;
@@ -81,31 +73,33 @@ section div.links a {
     border: 3px solid var(--cor-padrao);
     border-radius: 5px;
     width: 326px;
-    padding: 11px 0 11px 0;
     margin: 0 0 16px 0;
+    padding: 11px 0px 11px 0;
     text-align: center;
     color: var(--cor-padrao);
-
-    transition: all .3s;
+    text-transform: uppercase;
+    transition: all 0.2s;
 }
 
 section div.links a:hover {
-    transform: scale(1.03);
+    transform: scale(1.04);
 }
 
 section div.socialMedia {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 29px;
+    gap: 35px;
     margin: 52px 0 0 0;
 }
 
 section div.socialMedia img {
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.2s;
 }
 
 section div.socialMedia img:hover {
-    transform: scale(1.2);
+    transform: scale(1.4);
 }
+
+
